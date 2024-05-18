@@ -1,0 +1,85 @@
+<html> 
+    <head> 
+        <title> My first site </title> 
+        <link rel="stylesheet" href= "style.css"> 
+    </head> 
+</html> 
+<body> 
+    <h1 id="heading">Application Form</h1> 
+    <form> 
+        <fieldset> 
+        <legend> Personal Data</legend> 
+ 
+        <label> First name:  </label>  
+        <input id="fname" type ="text" placeholder="ex mona" >  <br><br> 
+ 
+        <label> Second Name:  </label>  
+        <input id="sname" type ="text" placeholder="ex ali"> <br><br> 
+ 
+        <label> Your Phone:   </label>        
+        <input id="num" type ="tel" ><br><br> 
+ 
+        <label> Email:   </label>        
+        <input id="email" type ="email" ><br><br> 
+ 
+        <label> Password:   </label>        
+        <input id="pass" type ="password"><br><br> 
+ 
+        <label> Upload your CV:   </label>        
+        <input id="file" type ="file"> 
+         
+        <br/> 
+        <br/> 
+        <input  id="ml" type="radio" name="gender"> 
+        <label> Male </label> <br/> 
+ 
+        <input id="fl" type="radio" name="gender" > 
+        <label> Female </label> <br/><br/><br/> 
+ 
+        <input id="st" type="checkbox" name="position"> 
+        <label> Student </label> <br/> 
+ 
+        <input id="gr" type="checkbox" name="position" > 
+        <label> Graduated </label> <br/> 
+        <br/> 
+        <br/> 
+ 
+        <button id="btn1" onclick="dataSend()"> Submit </button> 
+        <button id="btn2" onclick="countCharactersInH1()"> print </button> 
+        <button id="btn1" onclick="closePage()"> Exit </button> 
+        <p id="footerText"><?php echo 'ةظوفحم عبطلا قوقح &copy; 2024'; ?></p> 
+       
+  <script> 
+ 
+            function dataSend() { 
+              alert('Your data has already been sent'); 
+            } 
+     
+            function closePage() { 
+            window.close(); 
+            } 
+     
+         
+            function countCharactersInH1() { 
+            var h1Elements = document.getElementsByTagName('h1'); 
+             
+            if (h1Elements.length === 0) { 
+                alert('not found'); 
+                return; 
+            } 
+             
+            var totalCharacters = 0; 
+             
+            for (var i = 0; i < h1Elements.length; i++) { 
+                var textContent = h1Elements[i].textContent;  
+                var totalCharacters = textContent.length; 
+                 
+              } 
+             
+            alert('total number of the characters is: ' + totalCharacters); 
+         
+          </script> 
+             
+    </fieldset>          
+    </form> 
+</body>
